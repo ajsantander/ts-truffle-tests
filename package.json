@@ -5,21 +5,20 @@
   "main": "index.js",
   "scripts": {
     "compile-ts": "rm -rf lib && tsc",
-    "test": "npx truffle test"
+    "test": "npx mocha --require ts-node/register"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "mocha": "^5.2.0",
     "truffle": "^4.1.14",
-    "typescript": "^3.2.1",
-    "babel-preset-es2015": "^6.18.0",
-    "babel-preset-stage-2": "^6.24.1",
-    "babel-preset-stage-3": "^6.17.0",
-    "babel-polyfill": "^6.26.0",
-    "babel-register": "^6.23.0"
+    "ts-node": "^7.0.1",
+    "typescript": "^3.2.1"
   },
   "dependencies": {
-    "@types/node": "^10.12.12"
+    "@types/node": "^10.12.12",
+    "truffle-contract": "^3.0.6",
+    "web3": "^1.0.0-beta.36"
   }
 }
