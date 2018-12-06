@@ -9,8 +9,8 @@ contract("Contract", function(accounts) {
 
     const contract = await Contract.new();
 
-    jsutil();
-    // tsutil();
+    await jsutil(1000);
+    // await tsutil(1000);
 
     const str = await contract.test();
     assert.equal(str, "Hello");
