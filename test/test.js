@@ -1,7 +1,7 @@
 const Contract = artifacts.require("Contract");
 
 import jsutil from '../src/jsutil';
-// import tsutil from '../src/tsutil';
+import tsutil from '../src/tsutil';
 
 contract("Contract", function(accounts) {
 
@@ -10,7 +10,7 @@ contract("Contract", function(accounts) {
     const contract = await Contract.new();
 
     await jsutil(1000);
-    // await tsutil(1000);
+    await tsutil(1000);
 
     const str = await contract.test();
     assert.equal(str, "Hello");
